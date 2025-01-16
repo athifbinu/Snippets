@@ -1,11 +1,11 @@
-import { db } from '@/db';
+import React from "react";
 
-export default async function Home() {
-  const snippets = await db.snippet.findMany();
+const page = () => {
+  return (
+    <div>
+      <h1>Home</h1>
+    </div>
+  );
+};
 
-  const renderedSnippets = snippets.map((snippet) => {
-    return <div key={snippet.id}>{snippet.title}</div>;
-  });
-
-  return <div>{renderedSnippets}</div>;
-}
+export default page;
